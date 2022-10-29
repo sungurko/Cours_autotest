@@ -1,25 +1,28 @@
-# 1 При заданном целом трехзначном числе n посчитайте n + nn + nnn
-n = input('Введите число n: ')
+while True:
+    n = input('Введите число n: ')
+    if n.isdigit():
+        break
+    else:
+        print('Необходимо ввести число')
 
-def summa_nn(n):
+# 1 При заданном целом трехзначном числе n посчитайте n + nn + nnn
+def summa_nn(n: str) -> int:
 	nn = int(n + n)
 	nnn = int(n + n + n)
 	result = int(n) + nn + nnn
 	print(f'Результатом {n} + {nn} + {nnn} будет число:', result)
 
 # 2 Сложите цифры целого числа
-
-def summa_n(n):
+def summa_n(n: str) -> int:
 	n = int(n)
 	result = 0
 	while n > 0:
 		last = n % 10
 		summ += last
 		n = n // 10
-	print(result)
+	print(f'Сумма цифр целого числа {n} равна: ',result)
 
 # 2 Сложите цифры целого числа (второй вариант)
-
 def summa_n2(n):
 	result = sum(map(int, str(n)))
 	print(f'Сумма цифр целого числа {n} равна: ',result)
