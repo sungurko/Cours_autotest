@@ -30,7 +30,7 @@ def summa_n2(n: str) -> int:
 # 3 Найти корень третьей степени числа 343
 def koren(n):
 	n = int(n)
-	result = round(n **(1./3.))
+	result = round(n **(1/3))
 	print(f'Корень третьей степение для числа {n} будет равен', result)
 
 
@@ -43,4 +43,4 @@ if __name__ == '__main__':
 	#summa_nn(n)
 	#summa_n(n)
 	#summa_n2(n)
-	#koren(n)
+	koren(n)
