@@ -22,6 +22,10 @@ def count_symbol(text: str) -> str:
 # 7 Дана строка, содержащая полное имя файла (например, C:\development\inside\test-project_management\inside\myfile.lxl).
 #   Выделите из этой строки имя файла без расширения
 
+def file_name(text: str) -> str:
+	result = text.split('\\')[-1].rstrip(")'")
+	print(result)
+
 # 8 Проверить что номера телефонов состоят только из цифр. Они могут начинаться с "+", цифры могут быть разделены пробелами и дефисами "-"
 #   Например, 8-999-777-1111, +7 999 333 2222, +7 999-555-11-11 
 
@@ -43,5 +47,6 @@ def count_symbol(text: str) -> str:
 
 if __name__ == '__main__':
 	print('######## Результаты ########')
-	count_symbol(text)
+	#count_symbol(text)
+	file_name(text)
 	#delet_simvol()
